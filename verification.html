@@ -34,6 +34,20 @@
 
   <!-- Main CSS File -->
   <link href="main.css" rel="stylesheet" />
+
+  <script>
+  // Disable right-click
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+  
+  // Disable keyboard shortcuts like Ctrl+U (View Source), Ctrl+S (Save), Ctrl+P (Print)
+  document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.key === 's' || e.key === 'S' || e.key === 'p' || e.key === 'P')) {
+      e.preventDefault();
+    }
+  });
+</script>
 </head>
 
 <body class="index-page">
